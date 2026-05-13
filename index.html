@@ -317,7 +317,7 @@
         position: relative;
         min-height: 88svh;
         display: grid;
-        align-items: center;
+        align-items: start;
         overflow: hidden;
         isolation: isolate;
         background: var(--navy-950);
@@ -349,7 +349,7 @@
       .hero-inner {
         width: min(100%, var(--max));
         margin: 0 auto;
-        padding: 118px clamp(20px, 4vw, 32px) 84px;
+        padding: 104px clamp(20px, 4vw, 32px) 84px;
       }
 
       .hero-content {
@@ -911,28 +911,6 @@
         font-size: 1.06rem;
       }
 
-      .contact-method {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 40px;
-        padding: 0 14px;
-        border-radius: 6px;
-        border: 1px solid rgba(200, 177, 120, 0.45);
-        background: rgba(200, 177, 120, 0.08);
-        color: var(--gold-strong);
-        font-weight: 700;
-        font-size: 0.92rem;
-        letter-spacing: 0.01em;
-        transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
-      }
-
-      .contact-method:hover {
-        color: #f0dca8;
-        border-color: var(--gold-strong);
-        background: rgba(200, 177, 120, 0.14);
-      }
-
       .contact-methods {
         display: flex;
         flex-wrap: wrap;
@@ -941,11 +919,8 @@
         margin-top: 20px;
       }
 
-      .contact-methods .contact-method {
-        margin-top: 0;
-      }
-
-      .linkedin-icon-link {
+      .linkedin-icon-link,
+      .email-icon-link {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -953,13 +928,16 @@
         color: inherit;
       }
 
-      .linkedin-icon-link svg {
+      .linkedin-icon-link svg,
+      .email-icon-link svg {
         display: block;
+        flex-shrink: 0;
         width: 24px;
         height: 24px;
       }
 
-      .linkedin-icon-link--cta {
+      .linkedin-icon-link--cta,
+      .email-icon-link--cta {
         color: var(--gold-strong);
         min-width: 44px;
         min-height: 44px;
@@ -968,11 +946,13 @@
         transition: color 160ms ease;
       }
 
-      .linkedin-icon-link--cta:hover {
+      .linkedin-icon-link--cta:hover,
+      .email-icon-link--cta:hover {
         color: #f0dca8;
       }
 
-      .linkedin-icon-link--footer {
+      .linkedin-icon-link--footer,
+      .email-icon-link--footer {
         color: rgba(255, 255, 255, 0.72);
         min-width: 44px;
         min-height: 44px;
@@ -981,7 +961,8 @@
         transition: color 160ms ease;
       }
 
-      .linkedin-icon-link--footer:hover {
+      .linkedin-icon-link--footer:hover,
+      .email-icon-link--footer:hover {
         color: #fff;
       }
 
@@ -1054,14 +1035,14 @@
         .brand img { height: 38px; }
         .nav-cta { display: none; }
         .nav-mobile summary { min-height: 44px; padding: 0 14px; }
-        .hero { min-height: 86svh; align-items: end; }
+        .hero { min-height: 86svh; align-items: start; }
         .hero-media img { object-position: 55% 26%; }
         .hero::before {
           background:
             linear-gradient(0deg, rgba(10, 15, 21, 0.96) 0%, rgba(10, 15, 21, 0.78) 50%, rgba(10, 15, 21, 0.22) 100%),
             linear-gradient(90deg, rgba(10, 15, 21, 0.58), rgba(10, 15, 21, 0.10));
         }
-        .hero-inner { padding: 116px 16px 60px; }
+        .hero-inner { padding: 100px 16px 60px; }
         h1 { font-size: clamp(2.4rem, 11.5vw, 3.2rem); line-height: 1.04; }
         h2 { font-size: clamp(1.95rem, 8.6vw, 2.6rem); }
         .hero-copy { max-width: 100%; font-size: 1rem; }
@@ -1425,7 +1406,29 @@
                 legal design, product architecture and technical execution need to align.
               </p>
               <div class="contact-methods">
-                <a class="contact-method" href="mailto:ciaran@mcgonagleadvisory.com" aria-label="Email McGonagle Advisory">Contact by email</a>
+                <a
+                  class="email-icon-link email-icon-link--cta"
+                  href="mailto:ciaran@mcgonagleadvisory.com"
+                  aria-label="Email McGonagle Advisory"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M1.5 8.6691V17.25C1.5 18.9069 2.84315 20.25 4.5 20.25H19.5C21.1569 20.25 22.5 18.9069 22.5 17.25V8.6691L13.5723 14.1631C12.6081 14.7564 11.3919 14.7564 10.4277 14.1631L1.5 8.6691Z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M22.5 6.90783V6.75C22.5 5.09315 21.1569 3.75 19.5 3.75H4.5C2.84315 3.75 1.5 5.09315 1.5 6.75V6.90783L11.2139 12.8856C11.696 13.1823 12.304 13.1823 12.7861 12.8856L22.5 6.90783Z"
+                    />
+                  </svg>
+                </a>
                 <a
                   class="linkedin-icon-link linkedin-icon-link--cta"
                   href="https://www.linkedin.com/in/ciar%C3%A1n-mcgonagle-a4029013/"
@@ -1463,7 +1466,29 @@
         >
         <div class="footer-links">
           <span>&copy; 2026 McGonagle Advisory</span>
-          <a href="mailto:ciaran@mcgonagleadvisory.com" aria-label="Email McGonagle Advisory">Contact by email</a>
+          <a
+            class="email-icon-link email-icon-link--footer"
+            href="mailto:ciaran@mcgonagleadvisory.com"
+            aria-label="Email McGonagle Advisory"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                fill="currentColor"
+                d="M1.5 8.6691V17.25C1.5 18.9069 2.84315 20.25 4.5 20.25H19.5C21.1569 20.25 22.5 18.9069 22.5 17.25V8.6691L13.5723 14.1631C12.6081 14.7564 11.3919 14.7564 10.4277 14.1631L1.5 8.6691Z"
+              />
+              <path
+                fill="currentColor"
+                d="M22.5 6.90783V6.75C22.5 5.09315 21.1569 3.75 19.5 3.75H4.5C2.84315 3.75 1.5 5.09315 1.5 6.75V6.90783L11.2139 12.8856C11.696 13.1823 12.304 13.1823 12.7861 12.8856L22.5 6.90783Z"
+              />
+            </svg>
+          </a>
           <a
             class="linkedin-icon-link linkedin-icon-link--footer"
             href="https://www.linkedin.com/in/ciar%C3%A1n-mcgonagle-a4029013/"
