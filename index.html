@@ -526,14 +526,23 @@
 
       .trust-marks img {
         display: block;
-        max-height: clamp(22px, 2.6vw, 30px);
+        height: clamp(22px, 2.6vw, 28px);
         max-width: 100%;
         width: auto;
-        height: auto;
         object-fit: contain;
+        object-position: center center;
         opacity: 0.78;
         filter: brightness(0) invert(1);
-        transition: opacity 160ms ease;
+        transition: opacity 160ms ease, transform 160ms ease;
+      }
+
+      /* Optical alignment: DB wordmark sits low in its asset vs peer logos */
+      .trust-marks .logo-deutsche-bank img {
+        transform: translateY(-5px);
+      }
+
+      .trust-marks .logo-morgan-stanley img {
+        transform: translateY(2px);
       }
 
       .trust-marks li:hover img { opacity: 1; }
@@ -1055,7 +1064,8 @@
         .cta-panel { padding: 28px 22px; }
         .trust-marks { gap: 10px; }
         .trust-marks li { height: 38px; max-width: none; }
-        .trust-marks img { max-height: 22px; }
+        .trust-marks img { height: 22px; }
+        .trust-marks .logo-deutsche-bank img { transform: translateY(-4px); }
       }
 
       @media (prefers-reduced-motion: reduce) {
