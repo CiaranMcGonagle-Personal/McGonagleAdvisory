@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0c131b">
+    <title>Engagement Enquiry | McGonagle Advisory</title>
+    <meta
+      name="description"
+      content="Submit a potential mandate enquiry to McGonagle Advisory."
+    >
+    <link rel="canonical" href="https://mcgonagleadvisory.com/enquiry.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap">
+    <style>
+      :root {
+        --navy-950: #0c131b;
+        --navy-900: #111a24;
+        --ink: #111820;
+        --ink-soft: #3d4852;
+        --muted: #66717a;
+        --paper: #fbfaf7;
+        --panel: #ffffff;
+        --line: #d9d5ca;
+        --gold-text: #7d6a44;
+        --gold-strong: #c8b178;
+        --shadow: 0 22px 70px rgba(17, 24, 32, 0.10);
+        --radius: 8px;
+        --max: 1080px;
+        --font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+        --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.62;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      img { display: block; max-width: 100%; }
+      p { margin: 0; }
+
+      h1, h2 {
+        margin: 0;
+        font-family: var(--font-serif);
+        font-weight: 500;
+        letter-spacing: -0.012em;
+      }
+
+      :focus { outline: none; }
+      :focus-visible {
+        outline: 2px solid var(--gold-strong);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
+
+      .site-header {
+        background: var(--navy-950);
+        padding: 18px clamp(18px, 4vw, 48px);
+      }
+
+      .nav {
+        width: min(100%, var(--max));
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+      }
+
+      .brand img {
+        height: clamp(38px, 5vw, 50px);
+        width: auto;
+        opacity: 0.96;
+      }
+
+      .back-link {
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .back-link:hover { color: #fff; }
+
+      main {
+        padding: clamp(56px, 8vw, 96px) clamp(20px, 4vw, 32px);
+      }
+
+      .enquiry {
+        width: min(100%, var(--max));
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: minmax(0, 0.78fr) minmax(340px, 1fr);
+        gap: clamp(36px, 6vw, 80px);
+        align-items: start;
+      }
+
+      .section-label {
+        margin: 0 0 14px;
+        color: var(--gold-text);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 680px;
+        font-size: clamp(2.6rem, 5vw, 4.9rem);
+        line-height: 1.02;
+        letter-spacing: -0.018em;
+      }
+
+      .lead {
+        max-width: 620px;
+        margin-top: 24px;
+        color: var(--ink-soft);
+        font-size: clamp(1.04rem, 1.3vw, 1.18rem);
+        line-height: 1.6;
+      }
+
+      .enquiry-note {
+        margin-top: 28px;
+        padding-top: 22px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .form-panel {
+        padding: clamp(24px, 4vw, 34px);
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .form-panel h2 {
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0;
+      }
+
+      .enquiry-form {
+        display: grid;
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .field {
+        display: grid;
+        gap: 7px;
+      }
+
+      .field.full { grid-column: 1 / -1; }
+
+      label {
+        color: var(--gold-text);
+        font-size: 0.76rem;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        min-height: 46px;
+        padding: 12px 13px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fff;
+        color: var(--ink);
+        font: inherit;
+        font-size: 0.95rem;
+        line-height: 1.35;
+      }
+
+      textarea {
+        min-height: 132px;
+        resize: vertical;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: #8a9298;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 13px 20px;
+        border: 1px solid var(--navy-900);
+        border-radius: var(--radius);
+        background: var(--navy-900);
+        color: #fff;
+        font-family: var(--font-sans);
+        font-size: 0.94rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+      }
+
+      .button:hover {
+        background: #172434;
+        border-color: #172434;
+        transform: translateY(-1px);
+      }
+
+      .form-disclaimer {
+        color: var(--muted);
+        font-size: 0.84rem;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 880px) {
+        .enquiry { grid-template-columns: 1fr; }
+      }
+
+      @media (max-width: 620px) {
+        .site-header { padding: 14px 16px; }
+        main { padding-inline: 16px; }
+        h1 { font-size: clamp(2.35rem, 11vw, 3.2rem); }
+        .form-grid { grid-template-columns: 1fr; }
+        .button { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" aria-label="Site header">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="McGonagle Advisory home">
+          <img src="assets/mcgonagle-advisory-wordmark-light.png" alt="McGonagle Advisory" width="1072" height="278">
+        </a>
+        <a class="back-link" href="index.html">Back to site</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="enquiry" aria-labelledby="enquiry-title">
+        <div>
+          <p class="section-label">Engagement enquiry</p>
+          <h1 id="enquiry-title">Outline a potential mandate.</h1>
+          <p class="lead">
+            Initial discussions are used to assess fit, scope and timing for potential engagements.
+            Please provide enough context to identify the relevant mandate, decision point and timing.
+          </p>
+          <p class="enquiry-note">
+            McGonagle Advisory does not provide formal legal or regulatory advice, software development,
+            implementation delivery or staff augmentation.
+          </p>
+        </div>
+
+        <div class="form-panel">
+          <h2>Engagement details</h2>
+          <form class="enquiry-form" id="engagement-enquiry-form" action="mailto:ciaran@mcgonagleadvisory.com" method="post" enctype="text/plain">
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="Name" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="organisation">Organisation</label>
+                <input id="organisation" name="Organisation" autocomplete="organization">
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="Email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="timing">Relevant timing</label>
+                <input id="timing" name="Relevant timing" placeholder="e.g. Q3 decision, near-term review">
+              </div>
+              <div class="field full">
+                <label for="mandate">Nature of potential mandate</label>
+                <select id="mandate" name="Nature of potential mandate" required>
+                  <option value="">Select one</option>
+                  <option>Tokenisation strategy or market-structure assessment</option>
+                  <option>Smart contract or workflow design review</option>
+                  <option>ISDA documentation or standards alignment</option>
+                  <option>CDM readiness or documentation-to-data diagnostics</option>
+                  <option>Tokenised collateral or settlement architecture</option>
+                  <option>Design authority support for infrastructure project</option>
+                  <option>Other defined engagement</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="context">Brief context</label>
+                <textarea id="context" name="Brief context" placeholder="Outline the product, project, decision point or review needed." required></textarea>
+              </div>
+            </div>
+            <button class="button" type="submit">Submit Enquiry</button>
+            <p class="form-disclaimer">
+              Submitting this form will open a prepared email in your email client.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      (function () {
+        var form = document.getElementById('engagement-enquiry-form');
+        if (!form) return;
+
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          var data = new FormData(form);
+          var subject = 'Potential mandate enquiry';
+          var body = [
+            'Name: ' + (data.get('Name') || ''),
+            'Organisation: ' + (data.get('Organisation') || ''),
+            'Email: ' + (data.get('Email') || ''),
+            'Relevant timing: ' + (data.get('Relevant timing') || ''),
+            'Nature of potential mandate: ' + (data.get('Nature of potential mandate') || ''),
+            '',
+            'Brief context:',
+            data.get('Brief context') || ''
+          ].join('\n');
+
+          window.location.href = 'mailto:ciaran@mcgonagleadvisory.com?subject=' +
+            encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        });
+      })();
+    </script>
+  </body>
+</html>
