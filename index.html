@@ -581,6 +581,45 @@
         background: var(--paper-2);
       }
 
+      .mandates {
+        background: var(--panel);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .mandate-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        margin-top: 38px;
+        background: var(--line);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        overflow: hidden;
+      }
+
+      .mandate-item {
+        min-height: 146px;
+        padding: 26px;
+        background: #fff;
+      }
+
+      .mandate-item h3 {
+        margin-bottom: 10px;
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        font-weight: 800;
+        line-height: 1.28;
+        letter-spacing: 0;
+      }
+
+      .mandate-item p {
+        margin: 0;
+        color: var(--ink-soft);
+        font-size: 0.96rem;
+        line-height: 1.55;
+      }
+
       .section-head {
         display: grid;
         grid-template-columns: minmax(0, 0.78fr) minmax(300px, 1fr);
@@ -1021,6 +1060,7 @@
         .profile-grid,
         .cta-panel { grid-template-columns: 1fr; }
         .proof-points,
+        .mandate-grid,
         .service-grid { grid-template-columns: 1fr; }
         .service-card { min-height: auto; }
         .portrait { position: relative; top: auto; max-height: 620px; }
@@ -1050,6 +1090,7 @@
         .button { width: 100%; min-height: 48px; }
         section { padding-inline: 16px; }
         .proof-point,
+        .mandate-item,
         .service-card,
         .writing-item { padding: 22px; }
         .cta-panel { padding: 28px 22px; }
@@ -1122,7 +1163,7 @@
               commercially coherent.
             </p>
             <div class="actions" aria-label="Primary actions">
-              <a class="button primary" href="#contact">Discuss an engagement</a>
+              <a class="button primary" href="#contact">Book a free 30-minute discussion</a>
               <a class="button" href="#approach">Engagement formats</a>
             </div>
           </div>
@@ -1244,6 +1285,47 @@
         </div>
       </section>
 
+      <section class="mandates" aria-labelledby="mandates-title">
+        <div class="section-inner">
+          <div class="section-head">
+            <div>
+              <p class="section-label">Typical mandates</p>
+              <h2 id="mandates-title">What clients bring me in to help with.</h2>
+            </div>
+            <p class="lead">
+              The work is usually most valuable when legal documentation, market practice, product design and operating
+              model choices need to be made together rather than in sequence.
+            </p>
+          </div>
+          <div class="mandate-grid">
+            <article class="mandate-item">
+              <h3>Tokenisation strategy and market-structure assessment</h3>
+              <p>Assessing institutional opportunities, product models, settlement designs and credible routes to market.</p>
+            </article>
+            <article class="mandate-item">
+              <h3>Smart contract and workflow design review</h3>
+              <p>Testing whether proposed automation reflects the relevant rights, obligations, events and dependencies.</p>
+            </article>
+            <article class="mandate-item">
+              <h3>ISDA documentation and standards alignment</h3>
+              <p>Reviewing product designs against derivatives documentation, market standards and contractual architecture.</p>
+            </article>
+            <article class="mandate-item">
+              <h3>CDM readiness and documentation-to-data diagnostics</h3>
+              <p>Identifying how contractual terms, lifecycle events and operational processes should map into data and systems.</p>
+            </article>
+            <article class="mandate-item">
+              <h3>Tokenised collateral and settlement architecture</h3>
+              <p>Structuring collateral, settlement and post-trade workflows for regulated capital markets environments.</p>
+            </article>
+            <article class="mandate-item">
+              <h3>Design authority support for infrastructure projects</h3>
+              <p>Providing senior challenge and coordination where legal, product, commercial and technical teams need one coherent design.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="approach" id="approach" aria-labelledby="approach-title">
         <div class="section-inner">
           <p class="section-label">Approach</p>
@@ -1307,7 +1389,7 @@
             <p class="lead">
               I have worked at ISDA, leading global financial institutions and financial market infrastructure
               providers, focused on the legal, operational and technological foundations of digital assets, smart
-              derivatives contracts, tokenisation, computable financial-market
+              derivatives contracts, tokenisation and computable financial-market
               workflows.
             </p>
             <div class="credentials" aria-label="Selected credentials">
@@ -1400,10 +1482,11 @@
           <div class="cta-panel">
             <div>
               <p class="section-label">Contact</p>
-              <h2 id="contact-title">Working on something where law, product and technology need to align? Let&rsquo;s talk.</h2>
+              <h2 id="contact-title">Book a free 30-minute discussion.</h2>
               <p>
-                McGonagle Advisory works with institutions, market infrastructure providers and technology firms where
-                legal design, product architecture and technical execution need to align.
+                If you are assessing a tokenisation, smart contract, collateral, settlement or market-infrastructure
+                initiative, contact me for an initial 30-minute discussion. We can use the session to test the problem,
+                identify the main design questions and decide whether a fuller engagement would be useful.
               </p>
               <div class="contact-methods">
                 <a
@@ -1446,7 +1529,7 @@
               </div>
             </div>
             <div class="actions">
-              <a class="button primary" href="mailto:ciaran@mcgonagleadvisory.com" aria-label="Discuss an engagement by email">Discuss an engagement</a>
+              <a class="button primary" href="mailto:ciaran@mcgonagleadvisory.com?subject=Free%2030-minute%20discussion" aria-label="Book a free 30-minute discussion by email">Book a discussion</a>
             </div>
           </div>
         </div>
