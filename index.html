@@ -767,47 +767,21 @@
 
       .profile-copy .lead { margin-top: 22px; }
 
-      .credentials {
+      .profile-proof {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 14px;
-        margin-top: 32px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: clamp(24px, 4vw, 48px);
+        margin-top: 34px;
+        padding-top: 28px;
+        border-top: 1px solid var(--line);
       }
 
-      .credential {
-        min-height: 124px;
-        padding: 20px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: #fff;
-        color: var(--ink-soft);
-        font-size: 0.94rem;
-        line-height: 1.5;
-      }
-
-      .credential strong {
-        display: block;
-        margin-bottom: 6px;
-        color: var(--ink);
-        font-weight: 700;
-      }
-
-      .profile-extras {
-        margin-top: 32px;
+      .profile-proof-group {
         display: grid;
         gap: 16px;
       }
 
-      .profile-extra {
-        display: grid;
-        grid-template-columns: minmax(150px, 0.28fr) minmax(0, 1fr);
-        gap: clamp(20px, 3vw, 40px);
-        padding-top: 22px;
-        border-top: 1px solid var(--line);
-        align-items: start;
-      }
-
-      .profile-extra-label {
+      .profile-proof-label {
         margin: 0;
         color: var(--gold-text);
         font-size: 0.74rem;
@@ -817,7 +791,7 @@
         line-height: 1.45;
       }
 
-      .profile-extra-list {
+      .profile-proof-list {
         margin: 0;
         padding: 0;
         list-style: none;
@@ -825,7 +799,7 @@
         gap: 12px;
       }
 
-      .profile-extra-list li {
+      .profile-proof-list li {
         position: relative;
         padding-left: 18px;
         color: var(--ink-soft);
@@ -833,7 +807,7 @@
         line-height: 1.55;
       }
 
-      .profile-extra-list li::before {
+      .profile-proof-list li::before {
         content: "";
         position: absolute;
         left: 0;
@@ -844,20 +818,15 @@
         border-radius: 50%;
       }
 
-      .profile-extra-list strong {
+      .profile-proof-list strong {
         color: var(--ink);
         font-weight: 700;
       }
 
-      .profile-extra-list em {
-        color: var(--muted);
-        font-style: italic;
-      }
-
       @media (max-width: 720px) {
-        .profile-extra {
+        .profile-proof {
           grid-template-columns: 1fr;
-          gap: 12px;
+          gap: 28px;
         }
       }
 
@@ -1170,9 +1139,9 @@
         </div>
       </section>
 
-      <section class="trust" aria-label="Organisations I have worked with">
+      <section class="trust" aria-label="Professional experience">
         <div class="section-inner">
-          <p class="trust-intro">Organisations I&rsquo;ve worked with</p>
+          <p class="trust-intro">Professional experience</p>
           <ul class="trust-marks">
             <li class="logo-tokenovate">
               <img src="assets/logos/tokenovate.svg" alt="Tokenovate" loading="lazy" decoding="async">
@@ -1392,37 +1361,22 @@
               derivatives contracts, tokenisation and computable financial-market
               workflows.
             </p>
-            <div class="credentials" aria-label="Selected credentials">
-              <div class="credential">
-                <strong>Former Assistant General Counsel, ISDA</strong>
-                Led work across smart derivatives contracts, digital asset documentation and legal data standards.
-              </div>
-              <div class="credential">
-                <strong>Chief Legal &amp; Product Officer, fintech infrastructure</strong>
-                Directed product architecture for tokenised financial instruments and automated collateral workflows.
-              </div>
-              <div class="credential">
-                <strong>Former Deutsche Bank, Morgan Stanley and Allen &amp; Overy</strong>
-                Experience across global financial institutions and capital markets legal practice.
-              </div>
-            </div>
-
-            <div class="profile-extras">
-              <section class="profile-extra" aria-labelledby="leadership-heading">
-                <p class="profile-extra-label" id="leadership-heading">Industry leadership</p>
-                <ul class="profile-extra-list">
-                  <li><strong>LexisNexis</strong> Banking &amp; Finance Consulting Editorial Board</li>
-                  <li><strong>Chair</strong>, CDM Tokenised Assets Working Group</li>
-                  <li><strong>Co-chair</strong>, FINOS Smart Contracts Taskforce</li>
+            <div class="profile-proof" aria-label="Relevant experience and industry leadership">
+              <section class="profile-proof-group" aria-labelledby="experience-heading">
+                <p class="profile-proof-label" id="experience-heading">Relevant experience</p>
+                <ul class="profile-proof-list">
+                  <li><strong>Former Assistant General Counsel, ISDA</strong> &mdash; led work across smart derivatives contracts, digital asset documentation and legal data standards.</li>
+                  <li><strong>Chief Legal &amp; Product Officer, fintech infrastructure</strong> &mdash; directed product architecture for tokenised financial instruments and automated collateral workflows.</li>
+                  <li><strong>Former Deutsche Bank, Morgan Stanley and Allen &amp; Overy</strong> &mdash; experience across global financial institutions and capital markets legal practice.</li>
                 </ul>
               </section>
 
-              <section class="profile-extra" aria-labelledby="signature-heading">
-                <p class="profile-extra-label" id="signature-heading">Signature Projects</p>
-                <ul class="profile-extra-list">
-                  <li>Led development of the <strong>ISDA Digital Asset Derivatives Definitions</strong></li>
-                  <li>Led the <strong>ISDA Taxonomy and Clause Library</strong> project &mdash; recognised in the <em>FT Innovative Lawyers Awards 2019, Innovation in legal expertise</em></li>
-                  <li><strong>The Lawyer Hot 100</strong>, 2025</li>
+              <section class="profile-proof-group" aria-labelledby="leadership-heading">
+                <p class="profile-proof-label" id="leadership-heading">Industry leadership</p>
+                <ul class="profile-proof-list">
+                  <li><strong>Chair</strong>, FINOS CDM Tokenised Assets Working Group &amp; Smart Contracts Taskforce</li>
+                  <li><strong>Global Digital Finance</strong> Executive in Residence</li>
+                  <li><strong>LexisNexis</strong> Banking &amp; Finance Consulting Editorial Board</li>
                 </ul>
               </section>
             </div>
