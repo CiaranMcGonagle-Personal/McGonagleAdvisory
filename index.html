@@ -49,11 +49,10 @@
       },
       "areaServed": "Worldwide",
       "serviceType": [
-        "Capital markets advisory",
-        "Tokenisation strategy",
-        "Smart derivatives contracts",
-        "Product and system design",
-        "Independent design review"
+        "Strategy and operating models",
+        "Legal engineering and documentation-to-data",
+        "Digital assets, collateral and settlement",
+        "Independent review and design authority"
       ]
     }
     </script>
@@ -638,12 +637,12 @@
 
       .service-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 18px;
       }
 
       .service-card {
-        min-height: 384px;
+        min-height: 0;
         display: flex;
         flex-direction: column;
         padding: 30px;
@@ -662,39 +661,53 @@
         text-transform: uppercase;
       }
 
-      .service-card h3 + .card-tagline {
-        margin-top: 10px;
+      .service-card h3 + p {
+        margin: 14px 0 0;
       }
 
-      .card-tagline {
-        margin: 0 0 18px;
-        color: var(--gold-text);
-        font-family: var(--font-serif);
-        font-style: italic;
-        font-size: 1.02rem;
-        line-height: 1.4;
-      }
-
-      .service-card p {
+      .service-card > p:not(.card-kicker) {
         color: var(--ink-soft);
       }
 
-      .outputs {
-        margin-top: auto;
-        padding-top: 22px;
+      .service-activities {
+        margin: 24px 0 0;
+        padding: 22px 0 0;
         border-top: 1px solid var(--line);
-        color: var(--muted);
-        font-size: 0.94rem;
+        list-style: none;
       }
 
-      .outputs strong {
+      .service-activities::before {
+        content: "Typical work includes";
         display: block;
-        margin-bottom: 6px;
+        margin-bottom: 12px;
         color: var(--ink);
         font-size: 0.86rem;
         font-weight: 700;
         letter-spacing: 0.04em;
         text-transform: uppercase;
+      }
+
+      .service-activities li {
+        position: relative;
+        padding-left: 16px;
+        color: var(--muted);
+        font-size: 0.94rem;
+        line-height: 1.5;
+      }
+
+      .service-activities li + li {
+        margin-top: 8px;
+      }
+
+      .service-activities li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.67em;
+        width: 4px;
+        height: 4px;
+        background: var(--gold);
+        border-radius: 50%;
       }
 
       .services-disclaimer {
@@ -1039,8 +1052,8 @@
         .profile-grid,
         .cta-panel { grid-template-columns: 1fr; }
         .proof-points,
-        .mandate-grid,
-        .service-grid { grid-template-columns: 1fr; }
+        .mandate-grid { grid-template-columns: 1fr; }
+        .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
         .mandate-item { min-height: auto; }
         .service-card { min-height: auto; }
         .portrait { position: relative; top: auto; max-height: 620px; }
@@ -1068,6 +1081,7 @@
         .hero-copy { max-width: 100%; font-size: 1rem; }
         .actions { width: 100%; gap: 12px; }
         .button { width: 100%; min-height: 48px; }
+        .service-grid { grid-template-columns: 1fr; }
         section { padding-inline: 16px; }
         .proof-point,
         .mandate-item,
@@ -1250,53 +1264,79 @@
           <div class="section-head">
             <div>
               <p class="section-label">Services</p>
-              <h2 id="services-title">Founder-led advisory across strategy, legal engineering and product architecture.</h2>
+              <h2 id="services-title">Four pillars across strategy, legal design, product architecture and operating models.</h2>
             </div>
             <p class="lead">
-              Engagements are scoped around specific design questions, decision points and senior stakeholder needs.
+              Senior, independent judgement for institutions designing complex products, markets and capabilities.
             </p>
           </div>
           <div class="service-grid">
             <article class="service-card">
-              <h3>Strategic advisory</h3>
-              <p class="card-tagline">For boards, executives, investors and senior teams.</p>
+              <p class="card-kicker">Pillar 01</p>
+              <h3>Strategy and Operating Models</h3>
               <p>
-                Assessing digital asset, collateral, smart contract and market infrastructure opportunities before
-                major strategic, commercial or investment commitments are made.
+                Help financial institutions, market infrastructures, law firms and technology companies define how new
+                products, markets and capabilities should operate.
               </p>
-              <div class="outputs">
-                <strong>Typical outputs</strong>
-                Executive briefings, strategy papers, market-structure analysis, product direction.
-              </div>
+              <ul class="service-activities">
+                <li>Legal-function and product operating models</li>
+                <li>Entry into OTC, digital-asset or other new markets</li>
+                <li>Governance and decision frameworks</li>
+                <li>Alignment across legal, trading, operations, product and technology</li>
+                <li>AI and automation readiness for legal and contractual workflows</li>
+              </ul>
             </article>
             <article class="service-card">
-              <h3>Legal engineering and product architecture</h3>
-              <p class="card-tagline">For firms turning legal and operational requirements into executable designs.</p>
+              <p class="card-kicker">Pillar 02</p>
+              <h3>Legal Engineering and Documentation-to-Data</h3>
               <p>
-                Converting legal documentation, market standards, lifecycle events and operating requirements into
-                product designs, workflows and executable specifications.
+                Translate legal agreements, market conventions and lifecycle processes into structured data, executable
+                rules and system requirements.
               </p>
-              <div class="outputs">
-                <strong>Typical outputs</strong>
-                Product architecture, operating models, documentation-to-data mapping, workflow specifications.
-              </div>
+              <ul class="service-activities">
+                <li>Contract logic and clause mapping</li>
+                <li>CDM readiness and implementation strategy</li>
+                <li>Computable-contract design</li>
+                <li>Documentation-to-data operating models</li>
+                <li>Lifecycle, event and state modelling</li>
+                <li>Explainable and controlled automation</li>
+              </ul>
             </article>
             <article class="service-card">
-              <h3>Independent design review</h3>
-              <p class="card-tagline">For teams needing senior challenge before committing.</p>
+              <p class="card-kicker">Pillar 03</p>
+              <h3>Digital Assets, Collateral and Settlement</h3>
               <p>
-                Reviewing a product direction, client engagement, regulatory discussion, investment decision or
-                implementation programme before it becomes expensive to change.
+                Design legally grounded institutional infrastructure for digital assets, tokenised collateral and
+                programmable settlement.
               </p>
-              <div class="outputs">
-                <strong>Typical outputs</strong>
-                Design reviews, risk assessments, challenge papers, client or investor-readiness reviews.
-              </div>
+              <ul class="service-activities">
+                <li>Tokenised product and asset structures</li>
+                <li>Collateral mobility and eligibility workflows</li>
+                <li>Repo and derivatives infrastructure</li>
+                <li>Settlement finality and synchronised settlement</li>
+                <li>Digital securities and stablecoin operating models</li>
+                <li>Legal, operational and technical architecture</li>
+              </ul>
+            </article>
+            <article class="service-card">
+              <p class="card-kicker">Pillar 04</p>
+              <h3>Independent Review and Design Authority</h3>
+              <p>
+                Provide senior independent challenge for complex products, transactions and infrastructure programmes.
+              </p>
+              <ul class="service-activities">
+                <li>Strategic expert reviews</li>
+                <li>Legal-operational architecture assessments</li>
+                <li>Board and regulator-facing advice</li>
+                <li>Product and programme challenge</li>
+                <li>Governance and control reviews</li>
+                <li>Ongoing senior design authority</li>
+              </ul>
             </article>
           </div>
           <p class="services-disclaimer" role="note">
-            McGonagle Advisory is not a law firm, software vendor or staff-augmentation provider. Its role is to provide
-            independent strategic, legal-operational and product-architecture advice before and during critical design decisions.
+            McGonagle Advisory provides independent strategic, legal-design, product-architecture and operating-model advice.
+            It does not provide formal legal advice, software development, implementation delivery or staff augmentation.
           </p>
         </div>
       </section>
